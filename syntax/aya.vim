@@ -17,9 +17,11 @@ syn match ayaOperator '[.:]["\',\[\]();]'
 syn match ayaOperator ': '
 syn match ayaOperator 'M.'
 
-syn match ayaNumber '\d\+'
-syn match ayaNumber '\d\+.\d\+'
-syn match ayaNumber '3'
+syn match ayaNumber ':\?\d\+'
+syn match ayaNumber ':\?\d\+.\d\+'
+syn match ayaNumber ':\?\d\+.\d\+[a-z]'
+syn match ayaNumber ':\?\d\+.\d\+[a-z]\d\+'
+syn match ayaNumber ':\?\d\+.\d\+[a-z]\d\+.\d\+'
 
 syn region ayaBlock start="{" end="}" fold transparent
 
