@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: aya
 " Maintainer: Nicholas Paul
-" Latest Revision: Dec 2017
+" Latest Revision: Jun 2018
 
 if exists("b:current_syntax")
   finish
@@ -11,7 +11,7 @@ syn keyword ayaKeyword self import aya load using
 syn keyword ayaKeyword if then dowhile while print println
 syn keyword ayaKeyword getline conderr
 
-syn match ayaOperator '[:.]\?[A-Z><$%&!@\-_=*?\\|/+~]'
+syn match ayaOperator '[:.]\?[A-Z><$%&!@\-=*?\\|/+~]'
 syn match ayaOperator ':\?#'
 syn match ayaOperator '[.:]["\',\[\]();]'
 syn match ayaOperator ': '
@@ -34,9 +34,9 @@ syn match ayaComment '\.#.*$'
 syn region ayaComment start="\.{" end="\.}" contained
 syn region ayaComment start="\.{" end="\.}"
 
-syn match ayaSym '::[a-z]\+'
+syn match ayaSym '::[a-z_]\+'
 
-syn match ayaVar '\.\?:[a-z]\+'
+syn match ayaVar '\.\?:[a-z_]\+'
 
 let b:current_syntax = "aya"
 
