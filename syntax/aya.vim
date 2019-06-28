@@ -7,9 +7,10 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword ayaKeyword self import aya load using
+syn keyword ayaKeyword self meta import aya load using
 syn keyword ayaKeyword if then dowhile while print println
-syn keyword ayaKeyword getline conderr
+syn keyword ayaKeyword getline conderr impl class struct
+syn keyword ayaKeyword impl_static static
 
 syn match ayaOperator '[:.]\?[A-Z><$%&!@\-=*?\\|/+~]'
 syn match ayaOperator ':\?#'
@@ -36,7 +37,9 @@ syn region ayaComment start="\.{" end="\.}"
 
 syn match ayaSym '::[a-z_]\+'
 
-syn match ayaVar '\.\?:[a-z_]\+'
+syn match ayaVar '\.\?:[a-z_]\+;'
+
+syn match ayaVar '[a-z_]\+::[a-z_]\+'
 
 let b:current_syntax = "aya"
 
