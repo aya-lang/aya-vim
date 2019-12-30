@@ -7,10 +7,10 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword ayaKeyword self meta import aya load using
+syn keyword ayaKeyword self meta import load using
 syn keyword ayaKeyword if then dowhile while print println
-syn keyword ayaKeyword getline conderr impl class struct
-syn keyword ayaKeyword impl_static static
+syn keyword ayaKeyword getline class struct
+syn keyword ayaKeyword def module assert
 
 syn match ayaOperator '[:.]\?[A-Z><$%&!@\-=*?\\|/+~]'
 syn match ayaOperator ':\?#'
