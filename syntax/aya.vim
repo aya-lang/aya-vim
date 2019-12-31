@@ -35,10 +35,18 @@ syn match ayaComment '\.#.*$'
 syn region ayaComment start="\.{" end="\.}" contained
 syn region ayaComment start="\.{" end="\.}"
 
+syn match ayaSym '::.'
+syn match ayaSym '::\..'
+syn match ayaSym '::M.'
+syn match ayaSym ':::.'
 syn match ayaSym '::[a-z_]\+'
 
 syn match ayaVar '\.\?:[a-z_]\+;'
 
+syn match ayaVar '[a-z_]\+::.'
+syn match ayaVar '[a-z_]\+::M.'
+syn match ayaVar '[a-z_]\+:::.'
+syn match ayaVar '[a-z_]\+::\..'
 syn match ayaVar '[a-z_]\+::[a-z_]\+'
 
 let b:current_syntax = "aya"
